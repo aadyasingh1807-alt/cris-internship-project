@@ -1,10 +1,19 @@
-import './App.css';
+import Header from "./components/layout/Header/Header";
+import Footer from "./components/layout/Footer/Footer";
+
+import "./App.css";
 
 function App() {
   return (
-    <div>
-      Application Loading...
-    </div>
+    <>
+      <Header />
+
+      <main className="main-content">
+        <h1>Dashboard Placeholder</h1>
+      </main>
+
+      <Footer />
+    </>
   );
 }
 
