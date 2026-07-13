@@ -1,0 +1,16 @@
+.dashboard-page{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+.welcome-section,
+.alerts-section,
+.quick-access-section,
+.info-section{
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    min-height:120px;
+    padding:20px;
+}

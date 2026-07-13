@@ -1,11 +1,12 @@
 import MainLayout from "./components/layout/MainLayout/MainLayout";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 import "./App.css";
 
 function App() {
   return (
     <MainLayout>
-      <h1>Dashboard Placeholder</h1>
+      <Dashboard />
     </MainLayout>
   );
 }

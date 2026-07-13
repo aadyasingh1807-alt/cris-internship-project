@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import Sidebar from "../Sidebar/Sidebar";
 
 import './MainLayout.css';
 
@@ -16,9 +17,9 @@ export default function MainLayout({ children }: Props) {
         <Header />
       </header>
 
-      <aside className="main-layout__sidebar">
-        Sidebar
-      </aside>
+    <aside className="main-layout__sidebar">
+      <Sidebar />
+    </aside>
 
       <main className="main-layout__content">
         {children}
