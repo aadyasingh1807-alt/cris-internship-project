@@ -34,14 +34,18 @@ function Header() {
           <div>
 
             <p className="welcome">
-              Welcome
+                Welcome
             </p>
 
             <span>
               Aadya Singh
             </span>
 
-          </div>
+            <p className="user-role">
+              DEPOT | NDLS | MECH
+            </p>
+
+</div>
 
         </div>
 

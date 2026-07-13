@@ -1,16 +1,144 @@
+/* ==========================
+   DASHBOARD PAGE
+========================== */
+
 .dashboard-page{
     display:flex;
     flex-direction:column;
     gap:24px;
 }
 
+
+/* ==========================
+   TOP SECTION
+========================== */
+
+.dashboard-top{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:24px;
+}
+
+
+/* ==========================
+   INFO GRID
+========================== */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+
+/* ==========================
+   CARD DESIGN
+========================== */
+
 .welcome-section,
+.qr-section,
 .alerts-section,
 .quick-access-section,
-.info-section{
+.info-card{
+
     background:#ffffff;
-    border:1px solid #e5e7eb;
-    border-radius:12px;
-    min-height:120px;
-    padding:20px;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:16px;
+
+    padding:24px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+
+    transition:all .25s ease;
+
+}
+
+
+/* Small hover effect */
+
+.welcome-section:hover,
+.qr-section:hover,
+.alerts-section:hover,
+.quick-access-section:hover,
+.info-card:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+
+/* ==========================
+   CARD HEIGHTS
+========================== */
+
+.welcome-section{
+    min-height:110px;
+}
+
+.qr-section{
+    min-height:110px;
+}
+
+.alerts-section{
+    min-height:170px;
+}
+
+.quick-access-section{
+    min-height:140px;
+}
+
+.info-card{
+    min-height:150px;
+}
+
+
+/* ==========================
+   FULL WIDTH CARD
+========================== */
+
+.full-width{
+    grid-column:1 / -1;
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:1200px){
+
+    .dashboard-top{
+        grid-template-columns:1fr;
+    }
+
+    .info-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:768px){
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard-page{
+        gap:16px;
+    }
+
+    .welcome-section,
+    .qr-section,
+    .alerts-section,
+    .quick-access-section,
+    .info-card{
+
+        padding:18px;
+
+    }
+
 }
