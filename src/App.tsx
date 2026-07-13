@@ -1,19 +1,12 @@
-import Header from "./components/layout/Header/Header";
-import Footer from "./components/layout/Footer/Footer";
+import MainLayout from "./components/layout/MainLayout/MainLayout";
 
 import "./App.css";
 
 function App() {
   return (
-    <>
-      <Header />
-
-      <main className="main-content">
-        <h1>Dashboard Placeholder</h1>
-      </main>
-
-      <Footer />
-    </>
+    <MainLayout>
+      <h1>Dashboard Placeholder</h1>
+    </MainLayout>
   );
 }
 
