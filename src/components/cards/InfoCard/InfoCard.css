@@ -6,6 +6,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    transition: all 0.25s ease;
 }
 
 /* Header */
@@ -61,4 +63,8 @@
     font-size: 13px;
     color: #566573;
     line-height: 1.4;
+}
+.info-card-component:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }

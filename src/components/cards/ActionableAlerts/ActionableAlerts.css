@@ -1,0 +1,54 @@
+.actionable-alerts{
+
+    background:var(--surface);
+
+    border:1px solid #E5E7EB;
+
+    border-radius:16px;
+
+    padding:24px;
+
+    box-shadow:var(--shadow);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.actionable-alerts-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+.warning-icon{
+
+    color:#F59E0B;
+
+    font-size:30px !important;
+}
+
+.actionable-alerts-header h2{
+
+    margin:0;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    color:#111827;
+}
+
+.alerts-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}

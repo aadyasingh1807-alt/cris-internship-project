@@ -1,6 +1,14 @@
 import "./Dashboard.css";
 
 import InfoCard from "../../components/cards/InfoCard/InfoCard";
+import ActionableAlerts from "../../components/cards/ActionableAlerts/ActionableAlerts";
+import QuickAccessCard from "../../components/cards/QuickAccessCard/QuickAccessCard";
+
+import { quickAccessData } from "../../data/src/data/quickAccessData";
+
+// Uncomment these when completed
+// import WelcomeCard from "../../components/cards/WelcomeCard/WelcomeCard";
+// import QRCodeCard from "../../components/cards/QRCodeCard/QRCodeCard";
 
 import AssignmentOutlinedIcon from "@mui/icons-material/AssignmentOutlined";
 import ContentCopyOutlinedIcon from "@mui/icons-material/ContentCopyOutlined";
@@ -11,30 +19,48 @@ export default function Dashboard() {
   return (
     <div className="dashboard-page">
 
-      {/* Top Row */}
+      {/* ---------- Top Row ---------- */}
       <div className="dashboard-top">
 
         <section className="welcome-section">
           Welcome Section
+          {/* <WelcomeCard /> */}
         </section>
 
         <section className="qr-section">
           QR / Feedback
+          {/* <QRCodeCard /> */}
         </section>
 
       </div>
 
-      {/* Alerts */}
+      {/* ---------- Actionable Alerts ---------- */}
       <section className="alerts-section">
-        Alerts Section
+        <ActionableAlerts />
       </section>
 
-      {/* Quick Access */}
+      {/* ---------- Quick Access ---------- */}
       <section className="quick-access-section">
-        Quick Access
+
+        <h2 className="section-title">
+          Quick Access
+        </h2>
+
+        <div className="quick-access-grid">
+
+          {quickAccessData.map((item) => (
+            <QuickAccessCard
+              key={item.id}
+              title={item.title}
+              icon={item.icon}
+            />
+          ))}
+
+        </div>
+
       </section>
 
-      {/* Information Cards */}
+      {/* ---------- Information Cards ---------- */}
       <div className="info-grid">
 
         <section className="info-card">

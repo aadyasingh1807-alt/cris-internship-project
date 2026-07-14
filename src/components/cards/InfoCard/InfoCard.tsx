@@ -1,20 +1,21 @@
 import "./InfoCard.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { ReactNode } from "react";
-
+import type { ReactNode } from "react";
 interface InfoCardProps {
   title: string;
   description: string;
   icon: ReactNode;
+  onClick?: () => void;
 }
 
 export default function InfoCard({
   title,
   description,
   icon,
+  onClick,
 }: InfoCardProps) {
   return (
-    <div className="info-card-component">
+    <div className="info-card-component" onClick={onClick}>
       <div className="info-card-header">
         <h3>{title}</h3>
         <ArrowForwardIcon className="info-card-arrow" />

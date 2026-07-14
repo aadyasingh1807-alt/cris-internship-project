@@ -38,7 +38,36 @@
 .welcome-section,
 .qr-section,
 .alerts-section,
-.quick-access-section,
+.quick-access-section{
+
+    background:var(--surface);
+
+    border-radius:var(--radius);
+
+    border:1px solid #E5E7EB;
+
+    padding:24px;
+
+    box-shadow:var(--shadow);
+}
+.section-title{
+
+    margin:0 0 20px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:#111827;
+}
+.quick-access-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+
+    gap:18px;
+}
 .info-card{
 
     background:#ffffff;
@@ -84,7 +113,10 @@
 }
 
 .alerts-section{
-    min-height:170px;
+
+    display:flex;
+
+    flex-direction:column;
 }
 
 .quick-access-section{
