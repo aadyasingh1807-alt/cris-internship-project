@@ -1,6 +1,8 @@
 import "./Dashboard.css";
 
 import InfoCard from "../../components/cards/InfoCard/InfoCard";
+import WelcomeCard from "../../components/cards/WelcomeCard/WelcomeCard";
+import QRCodeCard from "../../components/cards/QRCodeCard/QRCodeCard";
 
 import AssignmentOutlinedIcon from "@mui/icons-material/AssignmentOutlined";
 import ContentCopyOutlinedIcon from "@mui/icons-material/ContentCopyOutlined";
@@ -15,11 +17,15 @@ export default function Dashboard() {
       <div className="dashboard-top">
 
         <section className="welcome-section">
-          Welcome Section
+            <WelcomeCard
+             trainImage="/images/train.png"
+            /> 
         </section>
 
         <section className="qr-section">
-          QR / Feedback
+          <QRCodeCard
+          qrImage="/images/telegram-qr.png"
+           />
         </section>
 
       </div>
