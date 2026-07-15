@@ -2,99 +2,119 @@ import "./Sidebar.css";
 
 import {
   FaHome,
-  FaClipboardList,
+  FaTrain,
+  FaBus,
+  FaCalendarAlt,
   FaFileAlt,
-  FaUserCog,
-  FaTools,
+  FaFolder,
+  FaShieldAlt,
+  FaTint,
+  FaGasPump,
+  FaIndustry,
+  FaFileContract,
+  FaClipboardList,
+  FaTable,
+  FaUsers,
+  FaWrench,
+  FaBuilding,
 } from "react-icons/fa";
 
+
 import {
-  MdDirectionsRailway,
   MdKeyboardArrowRight,
   MdSupportAgent,
 } from "react-icons/md";
+
+const menuItems = [
+  { title: "Home", icon: <FaHome />, active: true },
+  { title: "Rake Maintenance", icon: <FaTrain /> },
+  { title: "Coach Maintenance", icon: <FaBus /> },
+  { title: "Coach Master", icon: <FaCalendarAlt /> },
+  { title: "Central Applications", icon: <FaBuilding /> },
+  { title: "Coach Schedules", icon: <FaCalendarAlt /> },
+  { title: "Reports", icon: <FaFileAlt /> },
+  { title: "Miscellaneous Reports", icon: <FaFolder /> },
+  { title: "Drive", icon: <FaFolder /> },
+  { title: "Warranty Complaints", icon: <FaShieldAlt /> },
+  { title: "Watering & Cleaning", icon: <FaTint /> },
+  { title: "Fueling", icon: <FaGasPump /> },
+  { title: "Modification", icon: <FaWrench /> },
+  { title: "Machine and Plant", icon: <FaIndustry /> },
+  { title: "Contract", icon: <FaFileContract /> },
+  { title: "Document Module", icon: <FaClipboardList /> },
+  { title: "Pivot Table Reports", icon: <FaTable /> },
+  { title: "Coach Mitra", icon: <FaUsers /> },
+];
 
 export default function Sidebar() {
   return (
     <aside className="sidebar">
 
       {/* Logo */}
+
       <div className="sidebar-logo">
-        <div className="logo-circle">CR</div>
+
+        <div className="logo-circle">
+          CR
+        </div>
 
         <div>
           <h2>CRIS</h2>
           <p>Railway System</p>
         </div>
+
       </div>
 
       {/* Menu */}
 
-      <ul className="sidebar-menu">
+      <div className="sidebar-content">
 
-        <li className="active">
-          <div className="menu-left">
-            <FaHome />
-            <span>Dashboard</span>
-          </div>
-        </li>
+        <ul className="sidebar-menu">
 
-        <li>
-          <div className="menu-left">
-            <MdDirectionsRailway />
-            <span>Coach Maintenance</span>
-          </div>
+          {menuItems.map((item, index) => (
 
-          <MdKeyboardArrowRight />
-        </li>
+            <li
+              key={index}
+              className={item.active ? "active" : ""}
+            >
 
-        <li>
-          <div className="menu-left">
-            <FaTools />
-            <span>Workshop</span>
-          </div>
+              <div className="menu-left">
 
-          <MdKeyboardArrowRight />
-        </li>
+                {item.icon}
 
-        <li>
-          <div className="menu-left">
-            <FaClipboardList />
-            <span>Inspection</span>
-          </div>
-        </li>
+                <span>{item.title}</span>
 
-        <li>
-          <div className="menu-left">
-            <FaFileAlt />
-            <span>Reports</span>
-          </div>
-        </li>
+              </div>
 
-        <li>
-          <div className="menu-left">
-            <FaUserCog />
-            <span>User Management</span>
-          </div>
-        </li>
+              {index !== 0 && <MdKeyboardArrowRight />}
 
-      </ul>
+            </li>
 
-      {/* Help */}
+          ))}
 
-      <div className="help-card">
+          {/* Help Card */}
 
-        <MdSupportAgent className="help-icon"/>
+          <li className="help-wrapper">
 
-        <h4>Need Help?</h4>
+            <div className="help-card">
 
-        <p>
-          Contact CRIS Support Team
-        </p>
+              <MdSupportAgent className="help-icon" />
 
-        <button>
-          Contact
-        </button>
+              <h4>Need Help?</h4>
+
+              <p>
+                Contact CRIS Support Team
+              </p>
+
+              <button>
+                Contact
+              </button>
+
+            </div>
+
+          </li>
+
+        </ul>
 
       </div>
 
